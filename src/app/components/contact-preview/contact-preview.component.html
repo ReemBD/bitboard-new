@@ -1,9 +1,0 @@
-<li [routerLink]="['/contact', contact._id]">
-    <article class="contact-preview flex align-center">
-        <ngx-avatar src="https://robohash.org/{{contact.name}}" name="contact.name" [round]="true" size="80">
-        </ngx-avatar>
-        <div class="contact-name">{{contact.name}}</div>
-        <button mat-mini-fab click-stop-propagation matTooltip="Delete" class="remove-btn action-btn" color="primary" (click)="onRemoveContact.emit(contact._id)"><fa-icon [icon]="faTrash"></fa-icon></button>
-        <button mat-mini-fab click-stop-propagation matTooltip="Edit" class="edit-btn action-btn" color="secondary" (click)="router.navigate(['edit', contact._id])"><fa-icon [icon]="faEdit"></fa-icon></button>
-    </article>
-</li>
