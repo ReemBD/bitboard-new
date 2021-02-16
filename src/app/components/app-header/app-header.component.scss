@@ -1,0 +1,52 @@
+@import "../../../assets/scss/setup/variables";
+
+.main-header {
+    background-color: #212121;
+    color: #fff;
+    margin-bottom: 20px;
+    .logo {
+        font-size: 2rem;
+        cursor: pointer;
+
+        @for $i from 1 through length($logo-colors) {
+            &-letter-#{$i} {
+                margin-right: 3px;
+                color: nth($logo-colors, $i);
+            }
+        }
+    }
+    .nav-container {
+        height: 100%;
+    }
+    .main-nav {
+        & > *:not(:last-child) {
+            margin-inline-end: 35px;
+        }
+
+        li {
+            min-height: 22px;
+            height: 100%;
+            &:hover {
+                border-bottom: 2px solid nth($logo-colors, 3);
+            }
+        }
+    }
+
+    a {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .fa-icon {
+        outline: none;
+        font-size: 20px;
+        cursor: pointer;
+
+        &:hover {
+            color: rgb(211, 211, 211);
+        }
+    }
+}
