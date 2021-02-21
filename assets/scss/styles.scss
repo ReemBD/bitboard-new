@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* BASE */
+@import "./basics/base";
+@import "./basics/buttons";
+@import "./basics/helpers";
+@import "./basics/layout";
+
+//SETUP
+
+@import "./setup/mixins";
+@import "./setup//typography";
+@import "./setup/variables";
+
+html,
+body {
+    height: 100%;
+    font-family: "Open Sans", "sans-serif";
+    margin: 0;
+}
