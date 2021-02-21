@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, Input, EventEmitter, OnInit, Output, ChangeDetectionStrategy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Contact } from 'src/app/services/contact.model';
 import { ContactService } from 'src/app/services/contact.service';
@@ -6,7 +6,8 @@ import { ContactService } from 'src/app/services/contact.service';
 @Component({
   selector: 'contact-list',
   templateUrl: './contact-list.component.html',
-  styleUrls: ['./contact-list.component.scss']
+  styleUrls: ['./contact-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContactListComponent implements OnInit {
 
@@ -18,7 +19,7 @@ export class ContactListComponent implements OnInit {
   constructor(private ContactService: ContactService) { }
 
   ngOnInit(): void {
-    
+
   }
 
   ngOnChanges({ contacts }) {
